@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  .animate-shimmer {
+    animation: shimmer 2s ease-in-out infinite;
+ }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+/* Enhanced marquee with pause on hover */
+@keyframes marquee-enhanced {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee-enhanced {
+  animation: marquee-enhanced 25s linear infinite;
+}
+.animate-marquee-enhanced:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-enhanced-reverse {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee-enhanced-reverse {
+  animation: marquee-enhanced-reverse 25s linear infinite;
+}
+.animate-marquee-enhanced-reverse:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@keyframes color-cycle {
+  0% { color: #22d3ee; } /* cyan-400 */
+  20% { color: #a21caf; } /* purple-800 */
+  40% { color: #f59e42; } /* orange-400 */
+  60% { color: #22c55e; } /* green-500 */
+  80% { color: #f43f5e; } /* rose-500 */
+  100% { color: #22d3ee; }
+}
+.animate-notice-color {
+  animation: color-cycle 3s linear infinite;
+}
+
+/* Enhanced notice color animation */
+@keyframes notice-glow {
+  0% { 
+    color: #fbbf24; /* yellow-400 */
+    text-shadow: 0 0 5px #fbbf24, 0 0 10px #fbbf24;
+  }
+  25% { 
+    color: #f59e0b; /* yellow-500 */
+    text-shadow: 0 0 5px #f59e0b, 0 0 10px #f59e0b;
+  }
+  50% { 
+    color: #d97706; /* yellow-600 */
+    text-shadow: 0 0 5px #d97706, 0 0 10px #d97706;
+  }
+  75% { 
+    color: #f59e0b; /* yellow-500 */
+    text-shadow: 0 0 5px #f59e0b, 0 0 10px #f59e0b;
+  }
+  100% { 
+    color: #fbbf24; /* yellow-400 */
+    text-shadow: 0 0 5px #fbbf24, 0 0 10px #fbbf24;
+  }
+}
+.animate-notice-glow {
+  animation: notice-glow 2s ease-in-out infinite;
+}
+
+/* Animated border for SMART OFFER button */
+@keyframes border-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-border-move {
+  background-size: 200% 200%;
+  animation: border-move 2s linear infinite;
+}
+
+/* Enhanced animated border for notice bar */
+@keyframes notice-border {
+  0% { 
+    border-color: #fb5607;   /* orange */
+    box-shadow: 0 0 10px rgba(251, 86, 7, 0.5);
+  }
+  25% { 
+    border-color: #ff006e;  /* magenta/red */
+    box-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+  }
+  50% { 
+    border-color: #ff4d00;  /* deep orange */
+    box-shadow: 0 0 10px rgba(255, 77, 0, 0.5);
+  }
+  75% { 
+    border-color: #ff006e;
+    box-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+  }
+  100% { 
+    border-color: #fb5607;
+    box-shadow: 0 0 10px rgba(251, 86, 7, 0.5);
+  }
+}
+.animate-notice-border {
+  animation: notice-border 1.5s linear infinite;
+}
+
+/* New enhanced notice bar animations */
+@keyframes notice-pulse {
+  0%, 100% { 
+    background: linear-gradient(90deg, #000080 0%, #1e3a8a 50%, #000080 100%);
+  }
+  50% { 
+    background: linear-gradient(90deg, #1e3a8a 0%, #000080 50%, #1e3a8a 100%);
+  }
+}
+.animate-notice-pulse {
+  animation: notice-pulse 3s ease-in-out infinite;
+}
+
+@keyframes notice-slide-in {
+  0% { 
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate-notice-slide-in {
+  animation: notice-slide-in 0.5s ease-out;
+}
+
+/* Notice bar hover effects */
+@keyframes notice-hover {
+  0% { 
+    background: linear-gradient(90deg, #000080 0%, #1e3a8a 50%, #000080 100%);
+  }
+  100% { 
+    background: linear-gradient(90deg, #1e3a8a 0%, #000080 50%, #1e3a8a 100%);
+  }
+}
+.notice-hover:hover {
+  animation: notice-hover 0.3s ease-in-out forwards;
+}
+
+/* Enhanced text animations */
+@keyframes text-bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-3px); }
+  60% { transform: translateY(-2px); }
+}
+.animate-text-bounce {
+  animation: text-bounce 2s ease-in-out infinite;
+}
+
+/* Notice icon animations */
+@keyframes icon-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-icon-rotate {
+  animation: icon-rotate 3s linear infinite;
+}
+
+@keyframes icon-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+.animate-icon-pulse {
+  animation: icon-pulse 2s ease-in-out infinite;
+}
+
+@keyframes sponsored-border {
+  0% {
+    border-color: #fbbf24; /* yellow-400 */
+    box-shadow: 0 0 8px #fbbf24;
+  }
+  25% {
+    border-color: #22d3ee; /* cyan-400 */
+    box-shadow: 0 0 8px #22d3ee;
+  }
+  50% {
+    border-color: #a21caf; /* purple-800 */
+    box-shadow: 0 0 8px #a21caf;
+  }
+  75% {
+    border-color: #f59e42; /* orange-400 */
+    box-shadow: 0 0 8px #f59e42;
+  }
+  100% {
+    border-color: #fbbf24;
+    box-shadow: 0 0 8px #fbbf24;
+  }
+}
+.animate-sponsored-border {
+  animation: sponsored-border 2s linear infinite;
+}
