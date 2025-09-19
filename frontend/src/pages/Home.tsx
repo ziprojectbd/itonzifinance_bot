@@ -378,7 +378,7 @@ function Home() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col text-white relative overflow-hidden bg-black">
+    <div className="min-h-screen flex flex-col text-white relative overflow-hidden bg-white">
       {/* Enhanced Notice Bar with Marquee - absolutely fixed at top, above all */}
       <div className="w-full py-3 text-sm flex items-center fixed top-0 left-0 right-0 z-50 border-2 border-yellow-400 animate-notice-border animate-notice-pulse animate-notice-slide-in notice-hover backdrop-blur-sm" 
            style={{ 
